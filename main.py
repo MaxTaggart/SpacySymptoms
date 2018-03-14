@@ -27,6 +27,10 @@ def processPatientNotes(result_group):
                             # print(symptom_phrase)
     print("Patient ID: {}\nSymptoms: {}".format(patient_id, symptoms))
 
+groups = impressionNotes['subject_id']['groups']
+
+for group in groups:
+    processPatientNotes(group)
 
 
 # raw_texts = list(map(lambda x: x['report_text'], impressionNotes))
